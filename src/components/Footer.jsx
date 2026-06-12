@@ -1,6 +1,12 @@
 import React from 'react'
 
 export default function Footer() {
+  const handleNavClick = (e, section) => {
+    e.preventDefault()
+    console.log('Navigating to:', section)
+    alert(`Navigation to ${section} - Feature coming soon!`)
+  }
+
   return (
     <footer style={{ background: 'white', borderTop: '1px solid var(--border)', padding: '4rem 0 2rem' }}>
       <div className="container">
@@ -14,24 +20,24 @@ export default function Footer() {
           <div>
             <h4 style={{ marginBottom: '1.25rem' }}>Product</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <li><a href="#" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Scanner</a></li>
-              <li><a href="#" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Analysis</a></li>
-              <li><a href="#" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Privacy</a></li>
+              <li><a href="#scanner" onClick={(e) => handleNavClick(e, 'Scanner')} style={{ color: 'var(--muted)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--muted)'}>Scanner</a></li>
+              <li><a href="#analysis" onClick={(e) => handleNavClick(e, 'Analysis')} style={{ color: 'var(--muted)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--muted)'}>Analysis</a></li>
+              <li><a href="#privacy" onClick={(e) => handleNavClick(e, 'Privacy')} style={{ color: 'var(--muted)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--muted)'}>Privacy</a></li>
             </ul>
           </div>
           <div>
             <h4 style={{ marginBottom: '1.25rem' }}>Company</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <li><a href="#" style={{ color: 'var(--muted)', textDecoration: 'none' }}>About</a></li>
-              <li><a href="#" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Contact</a></li>
-              <li><a href="#" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Careers</a></li>
+              <li><a href="#about" onClick={(e) => handleNavClick(e, 'About')} style={{ color: 'var(--muted)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--muted)'}>About</a></li>
+              <li><a href="#contact" onClick={(e) => handleNavClick(e, 'Contact')} style={{ color: 'var(--muted)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--muted)'}>Contact</a></li>
+              <li><a href="#careers" onClick={(e) => handleNavClick(e, 'Careers')} style={{ color: 'var(--muted)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--muted)'}>Careers</a></li>
             </ul>
           </div>
           <div>
             <h4 style={{ marginBottom: '1.25rem' }}>Legal</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <li><a href="#" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Terms</a></li>
-              <li><a href="#" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Cookie Policy</a></li>
+              <li><a href="#terms" onClick={(e) => handleNavClick(e, 'Terms')} style={{ color: 'var(--muted)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--muted)'}>Terms</a></li>
+              <li><a href="#cookies" onClick={(e) => handleNavClick(e, 'Cookie Policy')} style={{ color: 'var(--muted)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--muted)'}>Cookie Policy</a></li>
             </ul>
           </div>
         </div>

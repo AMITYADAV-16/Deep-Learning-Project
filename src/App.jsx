@@ -9,14 +9,22 @@ import './App.css'
 function App() {
   const [showScanner, setShowScanner] = useState(false)
 
+  const handleStartScan = () => {
+    setShowScanner(true)
+  }
+
+  const handleBackFromScanner = () => {
+    setShowScanner(false)
+  }
+
   return (
     <div className="app-wrapper">
       <Header />
       <main>
         {!showScanner ? (
-          <Hero onStart={() => setShowScanner(true)} />
+          <Hero onStart={handleStartScan} />
         ) : (
-          <SkinScanner onBack={() => setShowScanner(false)} />
+          <SkinScanner onBack={handleBackFromScanner} />
         )}
       </main>
       <ChatBot />

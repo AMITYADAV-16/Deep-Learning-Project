@@ -31,3 +31,39 @@ main {
   opacity: 1;
   transition: opacity 300ms ease-in;
 }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 2rem;
+  }
+  
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+    padding: 4rem 1rem;
+  }
+  
+  .container[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  .scanner-container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+}
